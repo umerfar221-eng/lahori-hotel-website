@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10130e">
+<meta name="description" content="Lahori Hotel — asli chanay, parathay, breakfast, BBQ and dinner, dhaba style.">
+<title>Lahori Hotel — Asli Swad, Desi Mahol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#11140f;--green:#3a1110;--green2:#173528;--gold:#e6a83b;--cream:#f4ead6;--paper:#f8f0e1;--muted:#bdb7a8;--line:#4b3a21;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--ink);color:#fffaf0;font-family:Inter,Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+.topline{background:#741b1c;color:#d3c9b7;font-size:.78rem;border-bottom:1px solid #30291d;padding:7px 0}.topline .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:50;background:rgba(12,14,11,.96);backdrop-filter:blur(12px);border-bottom:1px solid #312a1d}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-icon{font-size:2.2rem;color:var(--gold)}.brand-name{font-family:"Playfair Display",Georgia,serif;font-size:1.48rem;font-weight:800;letter-spacing:.7px;line-height:1.1}.brand-name span{color:var(--gold)}.brand small{display:block;font:600 .58rem Inter,sans-serif;letter-spacing:2px;color:#c9c0ad;margin-top:5px}.navlinks{display:flex;align-items:center;gap:25px;font-size:.85rem;font-weight:600}.navlinks a{transition:color .2s}.navlinks a:hover,.navlinks a.active{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--gold);background:var(--gold);color:#151208;padding:12px 18px;border-radius:7px;font-weight:800;font-size:.9rem;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#ffd45e}.btn.outline{background:transparent;border-color:#eee0c7;color:#fffaf0}.btn.outline:hover{background:#ffffff12}.btn.green{background:#a32620;border-color:#a32620;color:white}.btn.green:hover{background:#20ae58}.menu-toggle{display:none;background:transparent;color:#fff;border:1px solid #55432a;border-radius:7px;padding:8px 11px}
+.hero{min-height:485px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(30,3,3,.88),rgba(30,3,3,.30)),url("assets/lahori-hotel-ai-composite.webp") center 48%/cover no-repeat}.hero:after{content:"";position:absolute;inset:auto 0 0;height:65px;background:linear-gradient(transparent,var(--green));pointer-events:none}.hero-content{position:relative;z-index:1;padding:54px 0 75px;max-width:590px}.script{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--gold);font-size:clamp(1.5rem,3vw,2.2rem);margin:0 0 2px;transform:rotate(-2deg)}h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(3.5rem,7vw,6.4rem);line-height:.98;letter-spacing:-2px;margin:0 0 13px;font-weight:800}h1 span,.gold{color:var(--gold)}.hero-tag{display:inline-block;background:var(--gold);color:#171208;padding:5px 15px;font-weight:800;letter-spacing:1px;font-size:.9rem;margin-bottom:14px}.hero p{font-size:1.04rem;color:#f0e8da;max-width:460px;margin:0 0 22px}.hero-points{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0 24px}.hero-point{font-size:.72rem;font-weight:700;display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.5px}.hero-point b{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:1rem}
+.feature-strip{background:#3a1110;border-top:1px solid #8a6a24;border-bottom:1px solid #6d511e}.feature-grid{display:grid;grid-template-columns:1fr 1fr}.feature{min-height:168px;position:relative;display:flex;align-items:center;overflow:hidden;padding:24px 28px;background-size:cover;background-position:center}.feature:first-child{background-image:linear-gradient(90deg,rgba(10,12,8,.97),rgba(10,12,8,.62),rgba(10,12,8,.1)),url('assets/chicken-karahi.jpg');border-right:1px solid #8b6823}.feature:last-child{background-image:linear-gradient(90deg,rgba(10,12,8,.97),rgba(10,12,8,.7),rgba(10,12,8,.1)),url('assets/chicken-sajji.jpg')}.feature-content{max-width:310px;position:relative;z-index:1}.feature h2{font:700 1.7rem "Playfair Display",Georgia,serif;margin:0 0 4px}.feature h2 span{color:var(--gold)}.feature p{font-size:.84rem;color:#eee2cf;margin:0 0 12px}.feature .btn{padding:9px 13px;font-size:.77rem}
+section{padding:62px 0}.menu-section{background:var(--paper);color:#171810}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:23px}.section-heading h2{font:800 clamp(2rem,4vw,2.65rem) "Playfair Display",Georgia,serif;margin:0}.section-heading p{color:#665c4c;margin:5px 0 0;font-size:.9rem}.section-eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.72rem;color:#9b2923;font-weight:800;margin-bottom:5px}.text-link{font-size:.85rem;font-weight:800;border-bottom:1px solid #8d681b;padding-bottom:5px;white-space:nowrap}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{background:transparent;color:#3a352b;border:1px solid #c9b99c;border-radius:30px;padding:8px 14px;font-size:.82rem;font-weight:700}.filter.active,.filter:hover{background:#641b19;border-color:#641b19;color:white}.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.food-card{background:#fffaf0;border:1px solid #d9c9ad;border-radius:8px;overflow:hidden;box-shadow:0 3px 10px #2a1c0a0c;transition:transform .2s,box-shadow .2s}.food-card:hover{transform:translateY(-3px);box-shadow:0 8px 18px #2a1c0a19}.food-img{height:132px;position:relative;background:#d3c4a7;overflow:hidden}.food-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.food-card:hover img{transform:scale(1.04)}.food-info{padding:10px 11px 11px}.food-info h3{font:700 1rem "Playfair Display",Georgia,serif;margin:0 0 4px}.food-info p{font-size:.76rem;color:#6b6254;line-height:1.45;margin:0 0 10px;min-height:33px}.food-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}.price{font-weight:800;font-size:.92rem}.add-btn{background:#641b19;color:white;border:0;border-radius:5px;padding:7px 10px;font-weight:800;font-size:.78rem}.add-btn:hover{background:#7c211d}
+.story-section{background:#3a1110;background-image:radial-gradient(ellipse at 10% 10%,#712321 0,transparent 52%)}.story-grid{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:40px}.story-copy h2{font:800 clamp(2rem,4vw,3rem)/1.1 "Playfair Display",Georgia,serif;margin:6px 0 14px}.story-copy p{color:#d5d4c5}.story-points{display:flex;gap:14px 20px;flex-wrap:wrap;margin:18px 0 23px;font-size:.82rem;font-weight:600}.story-points span:before{content:"✦";color:var(--gold);margin-right:7px}.story-photo{min-height:320px;border:1px solid #8b4b2c;border-radius:10px;background:linear-gradient(#0001,#0002),url('assets/lahori-hotel-ai-interior.webp') center/cover}
+.visit-section{background:#f3e8d3;color:#171810}.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px}.info-card{background:#fff9ed;border:1px solid #d8c6a6;border-radius:9px;padding:22px}.info-card h3{font:700 1.25rem "Playfair Display",Georgia,serif;margin:0 0 14px}.hours-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed #c8b99e;font-size:.82rem}.hours-row:last-child{border-bottom:0}.hours-row span{color:#645b4e}.hours-row strong{text-align:right}.info-card p{font-size:.85rem;color:#62594d}.info-card .btn{font-size:.8rem;padding:10px 12px}.map-placeholder{height:125px;border-radius:7px;background:linear-gradient(135deg,#ead9c7,#d8b6a2);display:grid;place-items:center;color:#6b2019;margin:12px 0;font-weight:800}
+.quote{background:#0b0e0a;text-align:center;padding:32px 0;border-top:1px solid #51401f;border-bottom:1px solid #51401f}.quote blockquote{font:700 clamp(1.4rem,3vw,2rem) "Playfair Display",Georgia,serif;margin:0 0 7px}.quote p{color:var(--gold);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin:0}
+footer{background:#4b1012;padding:30px 0 17px;color:#c6c0b2}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.82rem}.footer-links a:hover{color:var(--gold)}.socials{display:flex;gap:8px}.socials a{display:grid;place-items:center;width:31px;height:31px;border:1px solid #63512b;border-radius:50%;color:var(--gold);font-size:.8rem}.copyright{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #2b2a1f;margin-top:23px;padding-top:14px;font-size:.74rem;color:#928b7d}
+.toast{position:fixed;right:18px;bottom:18px;background:var(--gold);color:#171208;padding:12px 16px;border-radius:8px;font-weight:800;font-size:.86rem;box-shadow:0 8px 30px #0005;opacity:0;transform:translateY(120px);transition:.25s;z-index:80}.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){.navlinks{gap:14px}.navlinks a{font-size:.78rem}.brand-name{font-size:1.25rem}.menu-grid{grid-template-columns:repeat(3,1fr)}.visit-grid{grid-template-columns:1fr 1fr}.visit-grid .info-card:last-child{grid-column:span 2}}
+@media(max-width:760px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{height:68px}.menu-toggle{display:block}.nav-cta{display:none}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#741b1c;padding:20px 24px 24px;flex-direction:column;align-items:stretch;border-bottom:1px solid #49391f}.navlinks.open{display:flex}.navlinks a{font-size:.9rem}.hero{min-height:510px;background-position:60% center}.hero-content{padding:58px 0 80px}h1{letter-spacing:-1px}.hero-points{gap:12px}.feature{padding:20px 16px;min-height:185px}.feature h2{font-size:1.35rem}.feature p{font-size:.78rem}.feature .btn{font-size:.7rem;padding:8px}.menu-grid{grid-template-columns:repeat(2,1fr)}.food-img{height:145px}.story-grid{grid-template-columns:1fr;gap:24px}.story-photo{min-height:260px}.visit-grid{grid-template-columns:1fr}.visit-grid .info-card:last-child{grid-column:auto}section{padding:48px 0}}
+@media(max-width:480px){.topline .wrap{justify-content:center;text-align:center}.brand-name{font-size:1.08rem}.brand small{font-size:.48rem;letter-spacing:1.3px}.brand-icon{font-size:1.8rem}.hero{min-height:500px}.script{font-size:1.5rem}h1{font-size:3.35rem}.hero p{font-size:.95rem}.hero-points{gap:11px}.hero-point{font-size:.62rem}.hero-point b{width:28px;height:28px}.hero-actions .btn{padding:11px 13px}.feature-grid{grid-template-columns:1fr}.feature{min-height:160px;border-right:0!important;border-bottom:1px solid #6d511e}.section-heading{align-items:start;flex-direction:column}.menu-grid{gap:9px}.food-img{height:115px}.food-info{padding:9px}.food-info h3{font-size:.9rem}.food-info p{font-size:.7rem;min-height:48px}.price{font-size:.83rem}.add-btn{padding:6px 8px}.footer-row{align-items:flex-start;flex-direction:column}}
+
+/* Final red-and-gold menu polish */
+:root{--ink:#240706;--green:#4b0c0b;--green2:#741411;--gold:#f3bd4b;--cream:#fff0d8;--paper:#f8edda;--muted:#d8c2a5;--line:#9a3124}
+body{background:#390807}
+.topline{background:#5e0c0a!important;border-color:#a34c25!important}
+header{background:rgba(83,8,8,.98)!important;border-bottom:1px solid #d19a37!important}
+.navlinks{background:#650d0b}
+.navlinks a:hover,.navlinks a.active{color:#ffca55}
+.btn{background:#a80e0b;border-color:#f0bd48;color:#fff8e9}
+.btn:hover{background:#c41e17}
+.btn.green{background:#a80e0b;border-color:#f0bd48;color:#fff8e9}
+.btn.green:hover{background:#c41e17}
+.hero{background-color:#300605}
+.hero:before{background:linear-gradient(90deg,rgba(43,3,3,.96) 0%,rgba(72,5,5,.86) 33%,rgba(68,7,6,.45) 58%,rgba(20,3,2,.14) 100%)}
+.menu-section{background:#4a0807;color:#fff2dc}
+.section-heading h2{color:#fff0d8}
+.section-heading p{color:#e0c8a8}
+.section-eyebrow{color:#f0bd48}
+.text-link{color:#f0bd48;border-color:#d9a443}
+.filters .filter{border-color:#b7774b;color:#fff0d8}
+.filters .filter.active,.filters .filter:hover{background:#a80e0b;border-color:#f0bd48;color:#fff8e9}
+.food-card{background:#fff2dc;border:1px solid #d8a64d;border-radius:9px;box-shadow:0 5px 16px #15020145;color:#21110a}
+.food-info h3{color:#26120b}
+.food-info p{color:#725746}
+.add-btn{background:#a80e0b;color:#fff5e6;border:1px solid #e6ad3b}
+.add-btn:hover{background:#c41e17}
+.story-section{background:#5c0b09!important;background-image:radial-gradient(ellipse at 10% 10%,#8a1b13 0,transparent 52%)!important}
+.gallery-strip{background:#350605!important}
+.visit-section{background:#f6e7cd}
+footer{background:#270403!important}
+.toast{background:#f3bd4b}
+
+
+/* Food image consistency pass */
+.food-img{height:150px;background:#4a1710;overflow:hidden}
+.food-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.food-card{overflow:hidden}
+@media(max-width:760px){.food-img{height:130px}}
+
+
+/* Expanded family deal tiers */
+.deal-subheading{margin:24px 0 12px;border-bottom:1px solid #b56b3b;padding-bottom:8px}
+.deal-subheading h3{font:700 1.65rem "Playfair Display",Georgia,serif;color:#f3bd4b;margin:0}
+.deal-subheading p{font-size:.84rem;color:#e0c8a8;margin:3px 0 0}
+.deal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.deal-card .food-info{padding:16px}
+.deal-size{display:inline-block;color:#7a130f;background:#f3bd4b;border-radius:4px;padding:3px 7px;font-size:.68rem;font-weight:900;letter-spacing:.7px;margin-bottom:8px}
+.deal-card h3{font-size:1.12rem}
+.deal-note{margin-top:18px;font-size:.78rem;color:#e0c8a8;border-top:1px solid #a33d2c;padding-top:12px}
+@media(max-width:760px){.deal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.deal-grid{grid-template-columns:1fr}}
+
+
+/* Real-photo menu image layout */
+.food-img{height:170px;overflow:hidden;background:#2b0807}
+.food-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.food-img img[loading="lazy"]{background:#2b0807}
+@media(max-width:760px){.food-img{height:145px}}
+
+
+/* Sajji & Fish specials */
+.specials-section{background:#350605;color:#fff2dc;background-image:radial-gradient(ellipse at 90% 0%,#791711 0,transparent 48%)}
+.specials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.special-card{background:#fff2dc;color:#26120b;border:1px solid #e2ad43;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px #14020145;transition:transform .2s,box-shadow .2s}
+.special-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px #14020170}
+.special-card .food-img{height:190px;background:#2b0807}
+.special-card .food-info{padding:15px}
+.special-card .food-info h3{font-size:1.15rem}
+.special-card .food-info p{min-height:44px}
+.special-label{display:inline-block;background:#f3bd4b;color:#65100c;padding:3px 8px;border-radius:4px;font-size:.67rem;font-weight:900;letter-spacing:.7px;margin-bottom:7px}
+.specials-note{color:#e0c8a8;font-size:.8rem;margin-top:17px}
+@media(max-width:760px){.specials-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.special-card .food-img{height:145px}}
+@media(max-width:480px){.specials-grid{grid-template-columns:1fr}.special-card .food-img{height:190px}}
+
+</style>
+<!--
+  LAHORI HOTEL IMAGE EDITING GUIDE
+  To replace a photo later, open the assets folder and replace the image file
+  using the exact same filename. Keep index.html beside the assets folder.
+  Menu image filenames are listed in the README.md inside this ZIP.
+  Recommended replacement photos: JPG/WebP, landscape crop, about 1200–1600 px wide.
+-->
+</head>
+<body>
+<div class="topline"><div class="wrap"><span>📍 Your City, Pakistan</span><span>☀ Breakfast 7 AM–12 PM &nbsp; • &nbsp; 🌙 Dinner 6 PM–11 PM</span></div></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="brand-icon">♨</span><span class="brand-name">LAHORI <span>HOTEL</span><small>CHANAY · PARATHAY · DHABA STYLE</small></span></a>
+  <nav class="navlinks" id="navlinks"><a class="active" href="#home">HOME</a><a href="#menu">MENU</a><a href="#deals">DEALS</a><a href="#sajji-fish">SAJJI &amp; FISH</a><a href="#story">OUR STORY</a><a href="#gallery">GALLERY</a><a href="#visit">LOCATION</a><a href="#contact">CONTACT</a></nav>
+  <a class="btn green nav-cta" href="#contact">◉ &nbsp; Order on WhatsApp</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="hero-content">
+  <div class="script">Asli Swad, Desi Mahol</div><h1>Lahori <span>Hotel</span></h1><div class="hero-tag">CHANAY · PARATHAY · DHABA STYLE</div>
+  <p>Mashhoor chanay, parathay, garma garam nashta aur shandaar dinner — bilkul dhaba style.</p>
+  <div class="hero-points"><div class="hero-point"><b>✦</b> Freshly Prepared</div><div class="hero-point"><b>♨</b> Desi Flavours</div><div class="hero-point"><b>☼</b> Breakfast & Dinner</div><div class="hero-point"><b>♟</b> Family Friendly</div></div>
+  <div class="hero-actions"><a class="btn" href="#menu">🍴 View Menu　→</a><a class="btn outline" href="#visit">⌖ Find Us</a></div>
+</div></div></section>
+<div class="feature-strip"><div class="feature-grid">
+  <article class="feature"><div class="feature-content"><h2>Breakfast <span>Special</span></h2><p>Chanay, Parathay, Omelette, Chai aur bohat kuch.</p><a class="btn" href="#menu" data-jump="breakfast">View Breakfast Menu　→</a></div></article>
+  <article class="feature"><div class="feature-content"><h2>Dinner </span></h2><p>Chicken Karahi, Daal, fresh naan aur mazedaar desi khana.</p><a class="btn" href="#menu" data-jump="dinner">View Dinner Menu　→</a></div></article>
+</div></div>
+<section class="menu-section" id="menu"><div class="wrap">
+<div class="section-heading"><div><div class="section-eyebrow">Fresh from our kitchen</div><h2>Our <span class="gold">Desi Menu</span></h2><p>Breakfast, lunch and dinner — asli desi swad.</p></div><a class="text-link" href="#contact">Order by WhatsApp →</a></div>
+<div class="filters" role="group" aria-label="Filter menu">
+<button class="filter active" data-filter="all">All Items</button><button class="filter" data-filter="breakfast">Breakfast</button><button class="filter" data-filter="lunch">Lunch</button><button class="filter" data-filter="dinner">Dinner</button><button class="filter" data-filter="sides">Raita & Salad</button><button class="filter" data-filter="drinks">Chai & Drinks</button></div>
+<div class="menu-grid"><article class="food-card" data-category="breakfast"><div class="food-img"><img loading="lazy" alt="Lahori Chanay" src="assets/lahori-chanay.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Lahori Chanay</h3><p>Mashhoor chanay, desi masalay aur hara dhania.</p><div class="food-bottom"><span class="price">Rs. 200</span><button class="add-btn" data-item="Lahori Chanay">+ Add</button></div></div></article><article class="food-card" data-category="breakfast"><div class="food-img"><img loading="lazy" alt="Full Fry Egg" src="assets/full-fry-egg.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Full Fry Egg</h3><p>Two eggs fried to order, served hot.</p><div class="food-bottom"><span class="price">Rs. 180</span><button class="add-btn" data-item="Full Fry Egg">+ Add</button></div></div></article><article class="food-card" data-category="breakfast"><div class="food-img"><img loading="lazy" alt="Half Fry Egg" src="assets/half-fry-egg.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Half Fry Egg</h3><p>Egg fried sunny-side up, desi style.</p><div class="food-bottom"><span class="price">Rs. 100</span><button class="add-btn" data-item="Half Fry Egg">+ Add</button></div></div></article><article class="food-card" data-category="breakfast"><div class="food-img"><img loading="lazy" alt="Desi Omelette" src="assets/desi-omelette.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Desi Omelette</h3><p>Pyaz, hari mirch aur desi masalon wala omelette.</p><div class="food-bottom"><span class="price">Rs. 150</span><button class="add-btn" data-item="Desi Omelette">+ Add</button></div></div></article><article class="food-card" data-category="breakfast"><div class="food-img"><img loading="lazy" alt="Plain Paratha" src="assets/plain-paratha.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Plain Paratha</h3><p>Golden, flaky desi paratha.</p><div class="food-bottom"><span class="price">Rs. 80</span><button class="add-btn" data-item="Plain Paratha">+ Add</button></div></div></article><article class="food-card" data-category="lunch"><div class="food-img"><img loading="lazy" alt="Daal Channa" src="assets/daal-channa.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Daal Channa</h3><p>Traditional channa daal with fragrant desi tarka.</p><div class="food-bottom"><span class="price">Rs. 280</span><button class="add-btn" data-item="Daal Channa">+ Add</button></div></div></article><article class="food-card" data-category="lunch"><div class="food-img"><img loading="lazy" alt="Daal Mash" src="assets/daal-mash.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Daal Mash</h3><p>Slow-cooked lentils with a fragrant desi tarka.</p><div class="food-bottom"><span class="price">Rs. 350</span><button class="add-btn" data-item="Daal Mash">+ Add</button></div></div></article><article class="food-card" data-category="lunch"><div class="food-img"><img loading="lazy" alt="Chicken Aloo Qeema" src="assets/chicken-aloo-qeema.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Aloo Qeema</h3><p>Homestyle minced chicken and potato curry.</p><div class="food-bottom"><span class="price">Rs. 350</span><button class="add-btn" data-item="Chicken Aloo Qeema">+ Add</button></div></div></article><article class="food-card" data-category="lunch"><div class="food-img"><img loading="lazy" alt="Aloo Palak" src="assets/aloo-palak.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Aloo Palak</h3><p>Potato and spinach cooked with homestyle spices.</p><div class="food-bottom"><span class="price">Rs. 250</span><button class="add-btn" data-item="Aloo Palak">+ Add</button></div></div></article><article class="food-card" data-category="lunch"><div class="food-img"><img loading="lazy" alt="Mix Sabzi" src="assets/mix-sabzi.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Mix Sabzi</h3><p>Seasonal vegetables cooked in desi masala.</p><div class="food-bottom"><span class="price">Rs. 250</span><button class="add-btn" data-item="Mix Sabzi">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken Sajji" src="assets/chicken-sajji.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Sajji</h3><p>Slow-roasted desi chicken with aromatic spices.</p><div class="food-bottom"><span class="price">Rs. 1500</span><button class="add-btn" data-item="Chicken Sajji">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Grilled Fish" src="assets/grilled-fish.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Grilled Fish</h3><p>Fresh fish grilled with spices, lemon and herbs.</p><div class="food-bottom"><span class="price">Rs. 1500</span><button class="add-btn" data-item="Grilled Fish">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Fish Fry" src="assets/fish-fry.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Fish Fry</h3><p>Crispy masala-coated fish with lemon and chutney.</p><div class="food-bottom"><span class="price">Rs. 1500</span><button class="add-btn" data-item="Fish Fry">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken Karahi — Full" src="assets/chicken-karahi-full.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Karahi — Full</h3><p>Full chicken karahi with ginger, tomato and green chilli.</p><div class="food-bottom"><span class="price">Rs. 2200</span><button class="add-btn" data-item="Chicken Karahi — Full">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken Karahi — Half" src="assets/chicken-karahi-half.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Karahi — Half</h3><p>Half chicken karahi, rich with desi masalay.</p><div class="food-bottom"><span class="price">Rs. 1300</span><button class="add-btn" data-item="Chicken Karahi — Half">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken White Karahi — Full" src="assets/white-karahi-full.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken White Karahi — Full</h3><p>Creamy white karahi with pepper, ginger and green chilli.</p><div class="food-bottom"><span class="price">Rs. 2500</span><button class="add-btn" data-item="Chicken White Karahi — Full">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken White Karahi — Half" src="assets/white-karahi-half.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken White Karahi — Half</h3><p>Half white chicken karahi with creamy pepper masala.</p><div class="food-bottom"><span class="price">Rs. 1300</span><button class="add-btn" data-item="Chicken White Karahi — Half">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken Korma" src="assets/chicken-korma.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Korma</h3><p>Traditional chicken korma in rich aromatic gravy.</p><div class="food-bottom"><span class="price">Rs. 400</span><button class="add-btn" data-item="Chicken Korma">+ Add</button></div></div></article><article class="food-card" data-category="dinner"><div class="food-img"><img loading="lazy" alt="Chicken Haleem" src="assets/chicken-haleem.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Chicken Haleem</h3><p>Slow-cooked haleem with lentils, wheat and desi spices.</p><div class="food-bottom"><span class="price">Rs. 350</span><button class="add-btn" data-item="Chicken Haleem">+ Add</button></div></div></article><article class="food-card" data-category="sides"><div class="food-img"><img loading="lazy" alt="Raita" src="assets/raita.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Raita</h3><p>Cool, fresh yogurt raita — add to any meal.</p><div class="food-bottom"><span class="price">Rs. 100</span><button class="add-btn" data-item="Raita">+ Add</button></div></div></article><article class="food-card" data-category="sides"><div class="food-img"><img loading="lazy" alt="Fresh Salad" src="assets/fresh-salad.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Fresh Salad</h3><p>Fresh sliced salad to accompany your meal.</p><div class="food-bottom"><span class="price">Rs. 120</span><button class="add-btn" data-item="Fresh Salad">+ Add</button></div></div></article><article class="food-card" data-category="drinks"><div class="food-img"><img loading="lazy" alt="Karak Chai" src="assets/karak-chai.jpg" onerror="this.style.visibility='hidden'; this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><h3>Karak Chai</h3><p>Strong doodh patti, dhabay wali khushboo.</p><div class="food-bottom"><span class="price">Rs. 80</span><button class="add-btn" data-item="Karak Chai">+ Add</button></div></div></article></div></div></section>
+<section class="menu-section" id="deals" style="background:#5b0b09;color:#fff2dc">
+<div class="wrap">
+<div class="section-heading">
+  <div><div class="section-eyebrow">Share the desi taste</div><h2 style="color:#fff0d8">Lunch & Dinner <span class="gold">Family Deals</span></h2>
+  <p style="color:#e0c8a8">Choose a sharing platter for 2, 4, 6, 8, 10 or 12 people. Every deal includes raita and fresh salad.</p></div>
+</div>
+<div class="deal-subheading"><h3>Breakfast Family Deals</h3><p>Desi nashta for 2, 4, 6, 8, 10 and 12 people. Includes chanay, parathay, eggs and chai, raita and salad served on the side.</p></div>
+<div class="menu-grid deal-grid">
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">2 PEOPLE</span><h3>Breakfast Deal for 2</h3><p>2 parathay, 2 chanay, 2 eggs, 2 cups chai.</p><div class="food-bottom"><span class="price">Rs. 900</span><button class="add-btn" data-item="Breakfast Deal for 2">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">4 PEOPLE</span><h3>Breakfast Deal for 4</h3><p>4 parathay, 2 chanay, 4 eggs, 4 cups chai.</p><div class="food-bottom"><span class="price">Rs. 1,400</span><button class="add-btn" data-item="Breakfast Deal for 4">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">6 PEOPLE</span><h3>Breakfast Deal for 6</h3><p>6 parathay, 3 chanay, 1 haleem, 3 eggs, 6 cups chai.</p><div class="food-bottom"><span class="price">Rs. 2,170</span><button class="add-btn" data-item="Breakfast Deal for 6">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">8 PEOPLE</span><h3>Breakfast Deal for 8</h3><p>8 parathay, 4 chanay, 2 haleem, 4 eggs, 8 cups chai.</p><div class="food-bottom"><span class="price">Rs. 3,140</span><button class="add-btn" data-item="Breakfast Deal for 8">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">10 PEOPLE</span><h3>Breakfast Deal for 10</h3><p>10 parathay, 5 chanay, 3 haleem, 5 eggs, 10 cups chai.</p><div class="food-bottom"><span class="price">Rs. 4090</span><button class="add-btn" data-item="Breakfast Deal for 10">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">12 PEOPLE</span><h3>Breakfast Deal for 12</h3><p>12 parathay, 6 chanay, 4 haleem, 6 eggs, 12 cups chai.</p><div class="food-bottom"><span class="price">Rs. 5,060</span><button class="add-btn" data-item="Breakfast Deal for 12">+ Add</button></div></div></article>
+</div>
+<div class="deal-subheading"><h3>Lunch Deals</h3><p>Homestyle curries, daal, naan/roti, raita and salad.</p></div>
+<div class="menu-grid deal-grid">
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">2 PEOPLE</span><h3>Lunch Deal for 2</h3><p>Chicken aloo qeema, daal channa, 4 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 850</span><button class="add-btn" data-item="Lunch Deal for 2">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">4 PEOPLE</span><h3>Lunch Deal for 4</h3><p>Chicken aloo qeema, daal channa, mix sabzi, 8 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 1,650</span><button class="add-btn" data-item="Lunch Deal for 4">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">6 PEOPLE</span><h3>Lunch Deal for 6</h3><p>Chicken aloo qeema, daal channa, mix sabzi, aloo palak, 12 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 2,450</span><button class="add-btn" data-item="Lunch Deal for 6">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">8 PEOPLE</span><h3>Lunch Deal for 8</h3><p>Chicken aloo qeema, daal channa, mix sabzi, aloo palak, 16 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 3,250</span><button class="add-btn" data-item="Lunch Deal for 8">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">10 PEOPLE</span><h3>Lunch Deal for 10</h3><p>Chicken aloo qeema, daal channa, mix sabzi, aloo palak, 20 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 4,050</span><button class="add-btn" data-item="Lunch Deal for 10">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">12 PEOPLE</span><h3>Lunch Deal for 12</h3><p>Chicken aloo qeema, daal channa, mix sabzi, aloo palak, 24 roti/naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 4,850</span><button class="add-btn" data-item="Lunch Deal for 12">+ Add</button></div></div></article>
+</div>
+<div class="deal-subheading"><h3>Dinner Deals</h3><p>Karahi, naan, raita and fresh salad for a proper desi dinner.</p></div>
+<div class="menu-grid deal-grid">
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">2 PEOPLE</span><h3>Dinner Deal for 2</h3><p>Half chicken karahi, 2 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 1,650</span><button class="add-btn" data-item="Dinner Deal for 2">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">4 PEOPLE</span><h3>Dinner Deal for 4</h3><p>Full chicken karahi, 4 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 2,850</span><button class="add-btn" data-item="Dinner Deal for 4">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">6 PEOPLE</span><h3>Dinner Deal for 6</h3><p>1 full and 1 half chicken karahi, 6 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 4,150</span><button class="add-btn" data-item="Dinner Deal for 6">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">8 PEOPLE</span><h3>Dinner Deal for 8</h3><p>2 full chicken karahis, 8 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 5,450</span><button class="add-btn" data-item="Dinner Deal for 8">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">10 PEOPLE</span><h3>Dinner Deal for 10</h3><p>2 full and 1 half chicken karahi, 10 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 6,750</span><button class="add-btn" data-item="Dinner Deal for 10">+ Add</button></div></div></article>
+<article class="food-card deal-card"><div class="food-info"><span class="deal-size">12 PEOPLE</span><h3>Dinner Deal for 12</h3><p>3 full chicken karahis, 12 naan, raita and salad.</p><div class="food-bottom"><span class="price">Rs. 8,050</span><button class="add-btn" data-item="Dinner Deal for 12">+ Add</button></div></div></article>
+</div>
+<div class="deal-note">Deal prices are suggested starting prices. Please confirm food quantities, serving sizes and final prices before publishing.</div>
+</div></section>
+
+<section class="specials-section" id="sajji-fish"><div class="wrap">
+  <div class="section-heading"><div><div class="section-eyebrow">Fresh, hot & full of flavour</div><h2 style="color:#fff0d8">Sajji &amp; <span class="gold">Fish Specials</span></h2><p style="color:#e0c8a8">Roasted sajji, crispy fish and family platters — served with desi sides.</p></div><a class="text-link" href="#contact">Order by WhatsApp →</a></div>
+  <div class="specials-grid">
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/chicken-sajji.jpg" alt="Half chicken sajji" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">SINGLE / SHARE</span><h3>Half Chicken Sajji Deal</h3><p>Half roasted chicken served with 2 naan, raita and fresh salad.</p><div class="food-bottom"><span class="price">Rs. 750</span><button class="add-btn" data-item="Half Chicken Sajji Deal - Rs. 750">+ Add</button></div></div></article>
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/chicken-sajji.jpg" alt="Full chicken sajji" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">FULL CHICKEN</span><h3>Full Chicken Sajji Deal</h3><p>Full roasted chicken served with 4 naan, raita and fresh salad.</p><div class="food-bottom"><span class="price">Rs. 1,200</span><button class="add-btn" data-item="Full Chicken Sajji Deal - Rs. 1,200">+ Add</button></div></div></article>
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/fish-fry.jpg" alt="Lahori fish fry" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">CRISPY & SPICY</span><h3>Lahori Fish Fry Deal</h3><p>Masala fish fry with 2 naan, raita, salad and chutney.</p><div class="food-bottom"><span class="price">Rs. 1,500</span><button class="add-btn" data-item="Lahori Fish Fry Deal - Rs. 1,500">+ Add</button></div></div></article>
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/grilled-fish.jpg" alt="Grilled fish" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">GRILLED</span><h3>Grilled Fish Deal</h3><p>Fish grilled with desi spices, lemon and herbs, served with 2 naan, raita, salad and chutney.</p><div class="food-bottom"><span class="price">Rs. 1,500</span><button class="add-btn" data-item="Grilled Fish Deal - Rs. 1,500">+ Add</button></div></div></article>
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/chicken-sajji.jpg" alt="Family sajji platter" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">FAMILY PLATTER</span><h3>Family Sajji Platter</h3><p>Full chicken sajji served with 6 naan, a large raita and fresh salad.</p><div class="food-bottom"><span class="price">Rs. 2,500</span><button class="add-btn" data-item="Family Sajji Platter - Rs. 2,500">+ Add</button></div></div></article>
+    <article class="special-card"><div class="food-img"><img loading="lazy" src="assets/fish-fry.jpg" alt="Family fish platter" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#4a0807,#8b3020)'"></div><div class="food-info"><span class="special-label">FAMILY PLATTER</span><h3>Family Fish Platter</h3><p>Choose fish fry or grilled fish, served with 6 naan, large raita, salad and chutney.</p><div class="food-bottom"><span class="price">Rs. 2,500</span><button class="add-btn" data-item="Family Fish Platter - Rs. 2,500">+ Add</button></div></div></article>
+  </div>
+  <p class="specials-note">Prices are suggested examples. Confirm portion sizes and final prices before publishing.</p>
+</div></section>
+
+<section class="story-section" id="story"><div class="wrap story-grid"><div class="story-copy"><div class="section-eyebrow">A place for good food</div><h2>Our Story, <span class="gold">Our Swad</span></h2><p>Lahori Hotel ek aisi jagah hai jahan desi swad, dosti aur behtareen khanay ka maza milta hai. Hamara maqsad hai ke asli Lahori zaiqa har kisi tak pohanchay — chahe subah ka nashta ho ya doston ke saath dinner.</p><div class="story-points"><span>Desi Mahol</span><span>Fresh Food</span><span>Quality Ingredients</span><span>Munasib Prices</span></div><a class="btn" href="#visit">Come Visit Us　→</a></div><div class="story-photo" id="gallery" role="img" aria-label="Warm restaurant dining room"></div></div></section>
+<div class="quote"><div class="wrap"><blockquote>“Nashta ho ya dinner — <span class="gold">swad aisa jo yaad reh jaye!</span>”</blockquote><p>Asli Swad · Apna Desi Mahol</p></div></div>
+<section class="visit-section" id="visit"><div class="wrap"><div class="section-heading"><div><div class="section-eyebrow">We are ready to welcome you</div><h2>Visit <span style="color:#9b2923">Lahori Hotel</span></h2></div></div><div class="visit-grid">
+  <div class="info-card"><h3>◷ Opening Hours</h3><div class="hours-row"><span>Breakfast / Nashta</span><strong>7 AM – 12 PM</strong></div><div class="hours-row"><span>Lunch</span><strong>12 PM – 4 PM</strong></div><div class="hours-row"><span>Dinner</span><strong>6 PM – 11 PM</strong></div><p>Sample timings — update these to match your restaurant.</p></div>
+  <div class="info-card"><h3>⌖ Location</h3><p><strong>Find us on Google Maps</strong><br>Open our verified location to see the exact address and directions.</p><a class="map-placeholder" href="https://maps.app.goo.gl/uujLitDr1xgMGYLv7" target="_blank" rel="noopener noreferrer" style="height:180px;text-decoration:none;text-align:center;padding:16px;box-sizing:border-box;" aria-label="Open Lahori Hotel location on Google Maps"><span>📍</span><span>View Lahori Hotel on Google Maps</span><span style="font-size:.8rem;font-weight:600;text-decoration:underline;">Tap to open map ↗</span></a><a class="btn" id="mapLink" href="https://maps.app.goo.gl/uujLitDr1xgMGYLv7" target="_blank" rel="noopener noreferrer">Get Directions　→</a></div>
+  <div class="info-card" id="contact"><h3>Order & Contact</h3><p><strong>Phone:</strong><br>+92 334 5756924</p><p>For takeaway, family orders, or a quick chai stop, get in touch.</p><a class="btn green" id="whatsappLink" href="https://wa.me/923345756924?text=Assalam-o-Alaikum%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">◉ Order on WhatsApp</a><div class="socials" style="margin-top:16px"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="TikTok">♪</a></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap"><div class="footer-row"><a class="brand" href="#home"><span class="brand-icon">♨</span><span class="brand-name">LAHORI <span>HOTEL</span><small>CHANAY · PARATHAY · DHABA STYLE</small></span></a><div class="footer-links"><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#visit">Location</a><a href="#contact">Contact</a></div></div><div class="copyright"><span>© <span id="year"></span> Lahori Hotel. All rights reserved.</span><span>Made for desi food lovers.</span></div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite">Added to your order.</div>
+<script>
+(() => {
+  const WHATSAPP_NUMBER = '923345756924';
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('navlinks');
+  const toast = document.getElementById('toast');
+  const whatsappLink = document.getElementById('whatsappLink');
+  const year = document.getElementById('year');
+
+  let orderItems = [];
+  let toastTimer;
+
+  // Mobile navigation
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+  }
+
+  // Menu category filters (only affect the main menu, not family deals/specials)
+  const filters = [...document.querySelectorAll('.filter')];
+  const menuCards = [...document.querySelectorAll('#menu .food-card')];
+
+  function setFilter(value) {
+    filters.forEach(button => {
+      button.classList.toggle('active', button.dataset.filter === value);
+    });
+
+    menuCards.forEach(card => {
+      card.style.display =
+        value === 'all' || card.dataset.category === value ? '' : 'none';
+    });
+  }
+
+  filters.forEach(button => {
+    button.addEventListener('click', () => setFilter(button.dataset.filter));
+  });
+
+  document.querySelectorAll('[data-jump]').forEach(link => {
+    link.addEventListener('click', () => setFilter(link.dataset.jump));
+  });
+
+  function updateWhatsAppLink() {
+    if (!whatsappLink) return;
+
+    const message = orderItems.length
+      ? 'Assalam-o-Alaikum! I would like to order:\\n' +
+        orderItems.map((item, index) => `${index + 1}. ${item}`).join('\\n')
+      : 'Assalam-o-Alaikum! I want to place an order.';
+
+    whatsappLink.href =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+
+  // One delegated handler makes every Add button work, including deals and specials.
+  document.addEventListener('click', event => {
+    const button = event.target.closest('.add-btn');
+    if (!button) return;
+
+    const item = button.dataset.item;
+    if (!item) return;
+
+    orderItems.push(item);
+    updateWhatsAppLink();
+
+    if (toast) {
+      toast.textContent = `${item} added · ${orderItems.length} item(s) in order`;
+      toast.classList.add('show');
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2400);
+    }
+  });
+
+  if (year) year.textContent = new Date().getFullYear();
+  updateWhatsAppLink();
+})();
+</script>
+</body>
+</html>
